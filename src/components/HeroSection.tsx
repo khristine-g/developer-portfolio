@@ -2,106 +2,99 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center pt-24 pb-16 px-8">
-      <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen flex items-center pt-24 pb-16 px-6 bg-background">
+      <div className="container mx-auto grid md:grid-cols-12 gap-10 items-center max-w-5xl">
 
-        {/* Left Side */}
+        {/* Left Side: Direct Introduction */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="md:col-span-7 flex flex-col justify-center"
         >
-          <p className="font-display text-sm font-medium text-primary tracking-widest uppercase mb-4">
-            Software Engineer
-          </p>
+          {/* Your Name as the Main Subheading */}
+          <div className="flex flex-col gap-1 mb-4">
+            <span className="font-display text-sm font-bold tracking-tight text-foreground">
+              Khristine Githige
+            </span>
+            <span className="font-mono text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
+              Software Engineer
+            </span>
+          </div>
 
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Hi, I'm{" "}
-            <span className="text-gradient">
-              Khristine
+          {/* Strong, Plain English Headline */}
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.15] text-foreground">
+            Building fast, clean web apps that{" "}
+            <span className="text-gradient block sm:inline">
+              just work.
             </span>
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed">
-            I build modern web applications that combine clean code,
-            thoughtful design, and great user experiences. I enjoy solving
-            real-world problems and turning ideas into products people love
-            using.
+          {/* Clean Description Paragraph */}
+          <p className="text-sm md:text-base text-muted-foreground max-w-xl mb-8 leading-relaxed font-normal">
+            I am a software engineer focused on building reliable web applications using Next.js and TypeScript. I care about writing clean code, making pages load quickly, and keeping things easy to use.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="inline-flex px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-sm bg-primary text-primary-foreground font-medium text-xs tracking-wide hover:bg-neutral-900 transition-colors duration-200 shadow-sm"
             >
-              View My Work
+              See My Work
             </a>
 
             <a
-              href="#about"
-              className="inline-flex px-6 py-3 rounded-lg border border-border hover:bg-secondary transition"
+              href="#contact"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-sm border border-border bg-transparent text-foreground font-medium text-xs tracking-wide hover:bg-neutral-50 hover:border-neutral-400 transition-colors duration-200"
             >
-              About Me
+              Get in Touch
             </a>
           </div>
         </motion.div>
 
-        {/* Right Side */}
+        {/* Right Side: Clean Visual Status Block */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          whileHover={{ y: -5 }}
-          className="relative"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="md:col-span-5 relative hidden md:flex items-center justify-center h-[420px] w-full"
         >
-          <div className="relative bg-[#0d1117] rounded-2xl border border-gray-800 overflow-hidden shadow-2xl">
-
-            {/* VS Code Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800 bg-[#161b22]">
-              <div className="flex gap-2">
-                <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-                <span className="w-3 h-3 rounded-full bg-green-500"></span>
-              </div>
-
-              <span className="text-gray-400 text-sm font-mono">
-                aboutMe.js
+          {/* Minimalist Box Container */}
+          <div className="absolute inset-0 border border-border/60 bg-neutral-50/50 rounded-sm flex flex-col justify-between p-6 overflow-hidden">
+            
+            {/* Top Status Line */}
+            <div className="flex items-center justify-between w-full border-b border-border/40 pb-3">
+              <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+                Status // 2026
               </span>
-
-              <div></div>
+              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             </div>
 
-            {/* Code Content */}
-            <div className="p-6 overflow-x-auto">
-              <pre className="text-sm md:text-base leading-7 font-mono text-gray-300">
-{`const developer = {
-  name: "Khristine",
-
-  role: "Software Engineer",
-
-  mission:
-    "Build solutions that make
-     people's lives easier",
-
-  values: [
-    "Growth",
-    "Creativity",
-    "Excellence"
-  ],
-
-  currentlyWorkingOn:
-    "Creating meaningful digital experiences",
-
-  status: "Available for opportunities"
-};
-
-export default developer;`}
-              </pre>
+            {/* Middle Quick Note */}
+            <div className="my-auto max-w-xs">
+              <span className="font-mono text-xs font-semibold text-muted-foreground/60 block mb-2">
+                // Core Goal
+              </span>
+              <p className="text-sm text-foreground leading-relaxed font-normal">
+                Good software isn't complicated. It is just about writing clean, readable code and building features that make sense to the user.
+              </p>
             </div>
 
-            {/* Glow */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            {/* Bottom Details */}
+            <div className="flex items-end justify-between border-t border-border/40 pt-3 w-full">
+              <div>
+                <span className="text-[9px] uppercase font-mono tracking-wider text-muted-foreground block mb-0.5">
+                  Currently Building With
+                </span>
+                <span className="font-mono text-xs font-medium text-foreground">
+                  Next.js & TypeScript
+                </span>
+              </div>
+              <span className="font-mono text-[11px] text-muted-foreground/40">
+                Active
+              </span>
+            </div>
+            
           </div>
         </motion.div>
 

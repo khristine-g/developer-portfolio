@@ -1,13 +1,15 @@
 const Footer = () => {
   return (
-    <footer className="py-8 px-8 border-t border-border">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="font-display text-sm text-muted-foreground">
+    <footer className="py-12 px-6 bg-background border-t border-border/40">
+      <div className="container mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4">
+        
+        {/* Left Side: Clean Copyright Line */}
+        <p className="font-mono text-[10px] tracking-tight text-muted-foreground/60">
           © {new Date().getFullYear()} Khristine Githige. All rights reserved.
         </p>
-        <p className="text-sm text-muted-foreground">
-          Built with passion & precision
-        </p>
+
+        
+        
       </div>
     </footer>
   );

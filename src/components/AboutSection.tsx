@@ -1,55 +1,84 @@
 import { motion } from "framer-motion";
 
-const stats = [
-  { label: "Years Experience", value: "2+" },
-  { label: "Projects Completed", value: "20+" },
-  { label: "Technologies", value: "10+" },
+const focuses = [
+  { 
+    title: "01 // Frontend", 
+    description: "I build responsive interfaces using Next.js and TypeScript. I make sure data flows correctly and the code stays easy to update later." 
+  },
+  { 
+    title: "02 // User Experience", 
+    description: "I focus on clean layouts and simple navigation. I want pages to load fast and be easy for anyone to use." 
+  },
+  { 
+    title: "03 // Backend & APIs", 
+    description: "I connect frontends to databases and servers. I make sure data travels securely and reliably between the two." 
+  },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-8">
-      <div className="container mx-auto max-w-4xl">
+    <section id="about" className="py-24 px-6 bg-background border-t border-border/40">
+      <div className="container mx-auto max-w-5xl">
+        
+        {/* Upper Layout */}
+        <div className="grid md:grid-cols-12 gap-8 mb-16">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="md:col-span-4"
+          >
+            <p className="font-display text-xs font-semibold text-muted-foreground tracking-wider uppercase mb-2">
+              About Me
+            </p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-foreground leading-tight">
+              A developer focused on keeping things <span className="text-gradient">simple.</span>
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="md:col-span-8 space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed font-normal"
+          >
+            <p>
+              I build web applications that look clean and run smoothly on the inside. 
+              Instead of spending weeks overthinking a project, I prefer to get to work quickly, 
+              write clean code, test it, and fix things as I learn. 
+            </p>
+            <p>
+              I like knowing exactly how my tools work rather than just copying and pasting template code. 
+              Whether I am speeding up page load times or writing tests to catch bugs early, my goal is always 
+              the same: building clean, useful tools that do exactly what they are supposed to do.
+            </p>
+          </motion.div>
+          
+        </div>
+
+        {/* Lower Focus Blocks */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="grid md:grid-cols-3 gap-6 pt-10 border-t border-border/60"
         >
-          <p className="font-display text-sm font-medium text-primary tracking-widest uppercase mb-3">
-            About
-          </p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-8">
-            Passionate about building<br />
-            <span className="text-gradient">exceptional software</span>
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl">
-            I'm a software engineer who loves transforming ideas into reality through code. 
-            With a strong foundation in full-stack development, I specialize in creating 
-            performant, accessible, and visually stunning web applications.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-2xl">
-            When I'm not coding, you'll find me contributing to open source, mentoring 
-            aspiring developers, or exploring the latest in tech. I believe great software 
-            is built at the intersection of engineering excellence and empathetic design.
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-8"
-        >
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center p-6 rounded-xl bg-card border border-border">
-              <p className="font-display text-3xl md:text-4xl font-bold text-primary mb-2">
-                {stat.value}
+          {focuses.map((focus) => (
+            <div key={focus.title} className="p-5 rounded-sm bg-gradient-subtle border border-border/60 flex flex-col justify-between min-h-[150px]">
+              <h3 className="font-display text-xs font-semibold tracking-wider text-foreground mb-3">
+                {focus.title}
+              </h3>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                {focus.description}
               </p>
-              <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </motion.div>
+
       </div>
     </section>
   );
