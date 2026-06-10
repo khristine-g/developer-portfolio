@@ -21,7 +21,7 @@ const ContactSection = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="grid md:grid-cols-12 gap-10 items-start">
           
-          {/* Left Side: Stating the Intent */}
+         
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const ContactSection = () => {
             </p>
           </motion.div>
 
-          {/* Right Side: Clean Contact Links */}
+        
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="md:col-span-7 space-y-10"
           >
-            {/* Email Display Action */}
+          
             <div className="group block border-b border-border/60 pb-6">
               <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground block mb-2">
                 Email Me
@@ -61,7 +61,7 @@ const ContactSection = () => {
                   {email}
                 </a>
                 
-                {/* Minimal Copy Action inline */}
+                
                 <button
                   onClick={copyEmail}
                   className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors duration-200 bg-neutral-50 px-3 py-1.5 border border-border/50 rounded-sm"

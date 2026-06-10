@@ -20,7 +20,7 @@ const AboutSection = () => {
     <section id="about" className="py-24 px-6 bg-background border-t border-border/40">
       <div className="container mx-auto max-w-5xl">
         
-        {/* Upper Layout */}
+       
         <div className="grid md:grid-cols-12 gap-8 mb-16">
           
           <motion.div
@@ -59,7 +59,7 @@ const AboutSection = () => {
           
         </div>
 
-        {/* Lower Focus Blocks */}
+      
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}

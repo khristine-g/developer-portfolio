@@ -14,7 +14,7 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-background/70 backdrop-blur-md border-b border-border/40"
     >
-      {/* Brand Identity Signature */}
+     
       <a 
         href="#" 
         className="font-display text-sm font-bold tracking-wider text-foreground uppercase group"
@@ -22,7 +22,7 @@ const Navbar = () => {
         Khristine Githige <span className="font-mono text-xs font-light text-muted-foreground/60 transition-opacity duration-300 group-hover:text-foreground">// Portfolio</span>
       </a>
 
-      {/* Center Navigation Links */}
+     
       <ul className="hidden md:flex items-center gap-10">
         {navItems.map((item) => (
           <li key={item.label}>
@@ -36,7 +36,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Right Action Link */}
+    
       <a
         href="#contact"
         className="inline-flex items-center justify-center px-4 py-2 rounded-sm border border-border/80 bg-neutral-50 font-mono text-xs font-medium text-foreground tracking-tight hover:border-neutral-400 hover:bg-white transition-all duration-300"

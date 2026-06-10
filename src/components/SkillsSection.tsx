@@ -23,7 +23,7 @@ const SkillsSection = () => {
     <section id="skills" className="py-24 px-6 bg-background border-t border-border/40">
       <div className="container mx-auto max-w-5xl">
         
-        {/* Header Layout */}
+       
         <div className="grid md:grid-cols-12 gap-6 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -48,7 +48,7 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        {/* Minimal Stack List */}
+       
         <div className="space-y-0 border-t border-border/60">
           {stackGroups.map((group, i) => (
             <motion.div
@@ -59,21 +59,21 @@ const SkillsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="grid md:grid-cols-12 gap-4 py-6 border-b border-border/60 items-start hover:bg-neutral-50/50 transition-colors duration-200 px-2 group"
             >
-              {/* Category Name */}
+           
               <div className="md:col-span-3">
                 <h3 className="font-display text-sm font-semibold tracking-wide text-foreground">
                   {group.category}
                 </h3>
               </div>
 
-              {/* Functional Purpose Statement */}
+              
               <div className="md:col-span-5">
                 <p className="text-xs md:text-sm text-muted-foreground leading-relaxed max-w-sm">
                   {group.description}
                 </p>
               </div>
 
-              {/* Badges/Tools */}
+            
               <div className="md:col-span-4 flex flex-wrap gap-1.5 md:justify-end">
                 {group.tools.map((tool) => (
                   <span
